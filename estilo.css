@@ -172,3 +172,21 @@ button.complete-btn, button.delete-btn {
 }
 
 
+.task-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.task-text:hover::after {
+  content: "Haz clic para editar";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
