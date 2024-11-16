@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lobster', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: flex-start; 
+    padding: 20px;
+    background-color: #ffffffb2;
+    border-radius: 12px;
+    height: 100%;
+    width: 40%;
+    max-width: 40%; 
+    box-shadow: none; 
+    border: none;
+}
+
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%; 
+}
+
+#taskInput {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+
+#addTaskBtn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #b320b373;
+    color: #131212ef;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#addTaskBtn:hover {
+    background-color: #b320b3d0;
+}
+
+
+
+/* Contenedor de tareas */
+.task-container {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+/* Estilo para el título de Mis Tareas */
+.task-container h1 {
+   
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center; 
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #b320b31c;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+     
+}
+.task .actions {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+}
+.task.completed {
+    background-color: #dbc1d8; 
+}
+.task-text {
+    flex-grow: 1; 
+    margin-right: 10px;
+ }
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #7c7979;
+}
+
+button.complete-btn, button.delete-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+/* Estilo para el campo de edición cuando se hace clic en el texto de la tarea */
+.edit-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 70%; 
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Estilo del botón "Listo" */
+.done-btn {
+    padding: 8px 15px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.done-btn:hover {
+    background-color: #2ecc71;
+}
+.edit-input:focus {
+    border-color: #b320b3;
+}
+
+/* Para que los botones "Listo" y el campo de edición no se desalineen */
+.task.editing {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+
